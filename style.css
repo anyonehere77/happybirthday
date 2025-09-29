@@ -7,6 +7,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.gift-giphy {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin: 16px auto;
+    border-radius: 12px;
+}
+
 body {
     display: flex;
     justify-content: center;
