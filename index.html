@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Gift Screen -->
+    <div id="gift-screen" class="screen">
+      <img src="media/gift-box.gif" alt="Gift Box" id="gift-box" />
+      <img src="https://media1.tenor.com/m/uJ-JeMCce2oAAAAC/gift-present.gif" alt="Gift Present 2" id="gift-present-2" style="cursor:pointer;width:150px;display:block;margin:10px auto;" />
+      <p>Open the gift, princess 🎀 :)</p>
+    </div>
+
+    <!-- Name Prompt -->
+    <div id="name-prompt-screen" class="screen hidden">
+      <div class="prompt-box">
+        <p>Mine princess, type your name 💗?</p>
+        <input type="text" id="name-input" placeholder="Enter your name here" />
+        <button id="submit-name-btn">OK</button>
+      </div>
+    </div>
+
+    <!-- Birthday Card -->
+    <div id="main-content" class="screen hidden">
+      <div class="birthday-card">
+        <img src="https://media.tenor.com/7b73h3o1TXYAAAAi/peach-goma.gif" alt="Cute Cat" class="mochi-cat" />
+        <h1 id="birthday-greeting">Happy Birthday, [Name]🤍💋!</h1>
+        <div id="message-container"></div>
+
+        <div id="choice-container" class="hidden">
+          <p id="choice-question"></p>
+          <button id="yes-btn">Mumma let's celebrate your birthday 🎂?</button>
+          <button id="no-btn">Yeh badme birthday celebrate kare? 🥹</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <div id="gallery-screen" class="screen hidden">
+      <h2 id="gallery-title">Happy Birthday [Name] 💗🫅🏼</h2>
+      <div class="gallery-container">
+        <div class="gallery">
+          <span><img src="images/WhatsApp Image 2025-09-29 at 3.45.09 AM.jpeg" alt="Birthday Image" /></span>
+          <span><img src="../WhatsApp Image 2025-09-29 at 4.19.45 AM (1).jpeg" alt="Gallery 2" /></span>
+          <span><img src="../WhatsApp Image 2025-09-29 at 4.19.45 AM (2).jpeg" alt="Gallery 3" /></span>
+          <span><img src="../WhatsApp Image 2025-09-29 at 4.19.45 AM.jpeg" alt="Gallery 4" /></span>
+          <span><img src="../WhatsApp Image 2025-09-29 at 4.19.46 AM (1).jpeg" alt="Gallery 5" /></span>
+          <span><img src="../WhatsApp Image 2025-09-29 at 4.19.46 AM (2).jpeg" alt="Gallery 6" /></span>
+          <span><img src="../WhatsApp Image 2025-09-29 at 4.19.46 AM.jpeg" alt="Gallery 7" /></span>
+          <span><img src="../WhatsApp Image 2025-09-29 at 4.19.47 AM.jpeg" alt="Gallery 8" /></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="birthday-song" src="audio/hbd.mp3" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
