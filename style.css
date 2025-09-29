@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    overflow: hidden;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.9);
+}
+
+/* Gift Screen */
+#gift-screen p {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+#gift-box {
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+#gift-box:hover {
+    transform: scale(1.1);
+}
+
+/* Name Prompt Screen */
+.prompt-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+.prompt-box p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+#name-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+#submit-name-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff69b4;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+#submit-name-btn:hover {
+    background-color: #ff1493;
+}
+
+/* Main Content & Birthday Card */
+.birthday-card {
+    background: rgba(40, 40, 40, 0.85);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.mochi-cat {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+#birthday-greeting {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+#message-container {
+    min-height: 50px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+#choice-container button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+#yes-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+#no-btn {
+    background-color: #f44336;
+    color: white;
+    position: relative; /* For JS manipulation */
+}
+
+/* Gallery Screen */
+#gallery-title {
+    color: #fff;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    position: absolute;
+    top: 15%;
+    transform: translateY(-50%);
+}
+
+.gallery-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+}
+.gallery span {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 0;
+    left: 0;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+}
+.gallery span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.gallery span:nth-child(1) { --i: 1; }
+.gallery span:nth-child(2) { --i: 2; }
+.gallery span:nth-child(3) { --i: 3; }
+.gallery span:nth-child(4) { --i: 4; }
+.gallery span:nth-child(5) { --i: 5; }
+.gallery span:nth-child(6) { --i: 6; }
+.gallery span:nth-child(7) { --i: 7; }
+.gallery span:nth-child(8) { --i: 8; }
+
+@keyframes rotate {
+    0% { transform: perspective(1000px) rotateY(0deg); }
+    100% { transform: perspective(1000px) rotateY(360deg); }
+}
