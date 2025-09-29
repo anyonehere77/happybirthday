@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const giftBox = document.getElementById('gift-box');
   const submitNameBtn = document.getElementById('submit-name-btn');
+  const giftPresent2 = document.getElementById('gift-present-2');
   const nameInput = document.getElementById('name-input');
   const birthdaySong = document.getElementById('birthday-song');
 
@@ -22,27 +23,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const messages = [
     {
-      text: "Happy birthday, gorgeous! Today is all about celebrating you.",
+      text: "HAPPY BIRTHDAY, GORGOUES!💕 Today is all about celebrating you 🎊🎉.Mere khubsurat phool🌹 ko happpy birthday !Aap ho toh mere duniya🌍 hamesha colourful aur fragant lagti hai🦢 ",
       img: "https://media.tenor.com/7b73h3o1TXYAAAAi/peach-goma.gif",
     },
     {
-      text: "You are the sunshine of my life 🌞💗",
+      text: "YOUR THE SUNSHINE 🌤 OF MY LIFE 💞,yeh pure jahan 🌍me sabse jyada sukoon aur happiness sirf aapke sath feel hota  🌞💗",
       img: "https://media.tenor.com/s_SfT35F5R4AAAAi/peach-goma-peach-and-goma.gif",
     },
     {
-      text: "Aaj ka din itna special isliye hai kyunki aapka birthday hai 🎂✨",
+      text: "AAJ KA DIN ITNA SPECIAL🎊 isliye hai kyunki aaj meri Princess👸🏼 ka Birthday hai 🎂✨",
       img: "https://media.tenor.com/l-en3s2b1d0AAAAi/peach-and-goma-kiss.gif",
     },
     {
-      text: "Happy Birthday meri khoobsurat princess 💝",
+      text: "HAPPY BIRTHDAY MERI PRINCESS 💝 Zindagi ek film hai,Aur aap meri heroine ho, har scene mein.Aapke bina toh mere kahani adhuri si hai...Happy Birthday💗, meri khubsurat kahani!💗",
       img: "https://media.tenor.com/x0g1Zp2c0JcAAAAi/peach-and-goma.gif",
     },
     {
-      text: "Tere bina adhuri thi meri kahaani 🌸",
+      text: "Har pal aapke sath bitana 🫶🏼 ek blessing 🤲🏼hai.Aaj ke din aapko duniya 🌏ki saari khushiyan milen,Kyuki aap un sabse❤️ zyada deserve karti ho.Happy Birthday💙, meri pyaari si princess👸🏼!🌸",
       img: "https://media.tenor.com/Q2H3-V5v3MAAAAAi/peach-and-goma.gif",
     },
     {
-      text: "CHALO MUMMA MOMOS KHATE HAI 🤌🏻",
+      text: " MUMMA MOMOS🥟 KHATE HAI🍽 AUR ENJOY💃🏼🕺🏼 KARTE HAI 🤌🏻",
       img: "https://media.tenor.com/7z8i8o1i09wAAAAi/peach-and-goma.gif",
     },
   ];
@@ -72,6 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
     birthdaySong.play();
     switchScreen('namePrompt');
   });
+  if (giftPresent2) {
+    giftPresent2.addEventListener('click', () => {
+      birthdaySong.play();
+      switchScreen('namePrompt');
+    });
+  }
 
   submitNameBtn.addEventListener('click', () => {
     userName = nameInput.value.trim();
@@ -80,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    document.getElementById('birthday-greeting').textContent = `Happy Birthday, ${userName}!`;
-    document.getElementById('gallery-title').textContent = `Happy Birthday ${userName}`;
+    document.getElementById('birthday-greeting').textContent = `Happy Birthday, ${userName}🫅🏼💋!`;
+    document.getElementById('gallery-title').textContent = `Happy Birthday ${userName}💕`;
     switchScreen('main');
     playMessageSequence();
   });
